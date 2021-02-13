@@ -1,7 +1,25 @@
 package com.company;
 
 class ConditionalStatement {
-    public static void main(String[] args) {
+//5
+    public static String method5(int mark) {
+        String score = null;
+        if (mark< 0 || mark>100){
+            throw new IllegalArgumentException("Your mark should be more than 0 and less than 100") ;
+        }else if (mark >= 0 && mark <= 19) {
+            score= "Your mark is F";
+        } else if (mark >= 20 && mark <= 39) {
+            score="Your mark is E";
+        } else if (mark >= 40 && mark <= 59) {
+            score="Your mark is D";
+        } else if (mark >= 60 && mark <= 74) {
+            score="Your mark is C";
+        } else if (mark >= 75 && mark <= 89) {
+            score="Your mark is B";
+        } else if (mark >= 90 && mark <= 100) {
+            score="Your mark is A";
+        }
+        return score;
     }
 
     //1
@@ -14,7 +32,7 @@ class ConditionalStatement {
     }
 
     //2
-    private static String method2(int dot1, int dot2) {
+    public static String method2(int dot1, int dot2) {
 
         if (dot2 > 0 && dot1 < 0) {
             return "II";
@@ -52,11 +70,11 @@ class ConditionalStatement {
         return 0;
     }
 
-    ////4
-    private static int method4 ( int i1, int i2, int i3){
+    //4
+    public static int method4 ( int a, int b, int c){
         int result;
-        int sum = i1 + i2 + i3;
-        int multiply = i1 * i2 * i3;
+        int sum = a+ b+ c;
+        int multiply = a * b * c;
         if (sum > multiply) {
             result = sum + 3;
         } else {
@@ -64,23 +82,7 @@ class ConditionalStatement {
         }
         return result;
     }
-    //5
-    private static Object method5 ( int mark){
-        if (mark == 0 && mark <= 19) {
-            return "Your mark is F";
-        } else if (mark >= 20 && mark <= 39) {
-            return "Your mark is E";
-        } else if (mark >= 40 && mark <= 59) {
-            return "Your mark is F";
-        } else if (mark >= 60 && mark <= 74) {
-            return "Your mark is C";
-        } else if (mark >= 75 && mark <= 89) {
-            return "Your mark is B";
-        } else if (mark >= 90 && mark <= 100) {
-            return "Your mark is A";
-        }
-        return null;
-    }
 }
+
 
 

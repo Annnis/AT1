@@ -1,7 +1,9 @@
 package com.company;
 
 public class Loops {
-}
+    public static void main(String[] args) {
+
+    }
     ///1
     public static int method1() {
         int sum = 0;
@@ -31,6 +33,40 @@ public class Loops {
             return num + " составное число";
         }
     }
+//t3
+        public static int method3(int x) {
+            int result = x;
+            boolean finished = false;
+            if (x != 0 && x != 1) {
+                int start = 1, end = x / 2;
+                while (start <= end) {
+                    int mid = start + (end - start) / 2;
+                    if (mid == x / mid) {
+                        result = mid;
+                        finished = true;
+                        break;
+                    }
+                    if (mid < x / mid) {
+                        start = mid + 1;
+                    } else {
+                        end = mid - 1;
+                    }
+                }
+                if (!finished) {
+                    result = start - 1;
+                }
+            }
+
+            return result;
+        }
+    public static int method4(int number){
+        int result = 1;
+        for (int i = 1; i <= number; i++){
+            result *= i;
+        }
+        return result;
+    }
+
     //t5
     public static int method5(int num) {
         int result = 0;
@@ -40,21 +76,5 @@ public class Loops {
         }
         return result;
     }
-    //6
-    public static int[] method6(int[] array) {
-        int middle;
-        if(array.length % 2 == 0){
-            middle=array.length/2;
-        }else{
-            middle=array.length/22+1;
-        }
-        for (int i = 0; i < array.length/2; i++) {
-            int temp = array[i];
-            array[i]=array[middle + i];
-            array[middle+i]=temp;
-        }
-        return array;
-    }
-
 }
 
