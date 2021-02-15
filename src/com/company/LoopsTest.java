@@ -27,6 +27,12 @@ public class LoopsTest {
         Assert.assertEquals(actual, expected);
     }
 //3
+@Test
+    public void testMethod_3Select() {
+    int actual = Loops.sqrSelect(36);
+    int expected = 6;
+    Assert.assertEquals(actual, expected);
+}
     @Test
     public void testMethod_3sqt() {
         int actual = Loops.sqrtBinary(80);

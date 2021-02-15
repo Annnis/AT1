@@ -34,7 +34,19 @@ public class Loops {
             return num + " составное число";
         }
     }
-//t3
+//3Select
+    public static int sqrSelect(int number) {
+        int result = 0;
+        for (int i = 1; i <= number / 2; i++) {
+            if (i * i <= number && (i + 1) * (i + 1) > number) {
+                result =  i;
+                break;
+            }
+        }
+        return result;
+    }
+
+//t3Bin
         public static int sqrtBinary(int x) {
             int result = x;
             boolean finished = false;

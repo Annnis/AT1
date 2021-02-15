@@ -1,8 +1,12 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Array {
 
     public static void main(String[] args) {
+        int[] arr= new int[]{1,2,3,4};
+        System.out.println(reverse(arr));
             }
 //1
     public static String minOfArr(int[] array) {
@@ -59,6 +63,16 @@ public  static String minOfIndex(int[] array) {
         }
         return oddSum;
     }
+    //6
+    public static int[] reverse(int[] myArray) {
+             for (int i = 0; i < myArray.length / 2; i++) {
+            int temp = myArray[i];
+            myArray[i] = myArray[myArray.length - 1 - i];
+            myArray[myArray.length - 1 - i] = temp;
+        }
+        return myArray;
+    }
+
     //7
     public static int sumOfEven(int[] array) {
         int evenSum = 0;
@@ -72,23 +86,24 @@ public  static String minOfIndex(int[] array) {
     }
 //8
     public static int[] halfReverse(int[] array){
-        int middle = 0;
-		if((array.length) == 0) {
-                middle = array.length / 2;
-                }
-                else {
-                middle = array.length / 2 + 1;
-                }
-                for(int i = 0; i < array.length / 2; i++) {
-        int temp = array[i];
-        array[i] = array[middle + i];
-        array[middle + i] = temp;
+           int midd = 0;
+        if((array.length & 1) == 0) {
+            midd = array.length / 2;
+        }
+        else {
+            midd = array.length / 2 + 1;
+        }
+        for(int i = 0; i < array.length / 2; i++) {
+            int temp = array[i];
+            array[i] = array[midd + i];
+            array[midd + i] = temp;
         }
         return array;
-        }
+    }
+
 
 //9bubble
-    public void sortByBubble(int[] array) {
+    public static int[] sortByBubble(int[] array) {
         {
             int[] mas = array;
             boolean isSorted = false;
@@ -106,9 +121,10 @@ public  static String minOfIndex(int[] array) {
                 }
             }
         }
+        return array;
     }
 //9insert
-    public static void sortByInsert(int[] arr) {
+    public static int[] sortByInsert(int[] arr) {
         for(int i = 1; i < arr.length; i++){
             int currElem = arr[i];
             int prevKey = i - 1;
@@ -118,7 +134,24 @@ public  static String minOfIndex(int[] array) {
                 prevKey--;
             }
         }
+        return arr;
     }
+// 9select
+    public static int[] sortBySelect(int[] arr) {
+    	for (int start = 0; start < arr.length; start++) {
+        int minIndex = start;
+        for (int i = start; i < arr.length; i++) {
+            if (arr[minIndex] > arr[i]) {
+                minIndex = i;
+            }
+        }
+        int temp = arr[start];
+        arr[start] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+		return arr;
+}
+
 }
 
 
