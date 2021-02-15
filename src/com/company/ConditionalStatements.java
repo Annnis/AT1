@@ -2,7 +2,7 @@ package com.company;
 
 class ConditionalStatement {
 //5
-    public static String method5(int mark) {
+    public static String markByRate(int mark) {
         String score = null;
         if (mark< 0 || mark>100){
             throw new IllegalArgumentException("Your mark should be more than 0 and less than 100") ;
@@ -23,7 +23,7 @@ class ConditionalStatement {
     }
 
     //1
-    public static int method1(int num1, int num2) {
+    public static int sumOrMultyply(int num1, int num2) {
         if (num1 % 2 == 0) {
             return num1 * num2;
         } else {
@@ -32,7 +32,7 @@ class ConditionalStatement {
     }
 
     //2
-    public static String method2(int dot1, int dot2) {
+    public static String findDot(int dot1, int dot2) {
 
         if (dot2 > 0 && dot1 < 0) {
             return "II";
@@ -57,7 +57,7 @@ class ConditionalStatement {
     }
 
     //3
-    public static int method3( int numb1, int numb2, int numb3){
+    public static int sumOfPositive(int numb1, int numb2, int numb3){
         if (numb1 > 0 && numb2 > 0 && numb3 > 0) {
             return numb1 + numb2 + numb3;
         } else if (numb1 > 0 && numb2 > 0 && numb3 < 0) {
@@ -71,7 +71,7 @@ class ConditionalStatement {
     }
 
     //4
-    public static int method4 ( int a, int b, int c){
+    public static int countSumOrMultypyly( int a, int b, int c){
         int result;
         int sum = a+ b+ c;
         int multiply = a * b * c;
@@ -82,6 +82,7 @@ class ConditionalStatement {
         }
         return result;
     }
+
 }
 
 

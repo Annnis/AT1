@@ -2,22 +2,23 @@ package com.company;
 
 public class Loops {
     public static void main(String[] args) {
-
+        System.out.println(mirrored(987));
     }
-    ///1
-    public static int method1() {
+    //1
+    public static String SumOfEven() {
         int sum = 0;
         int counter = 0;
-        for (int i = 1; i < 99; i += 2) {
+        String result;
+        for (int i = 2; i < 99; i += 2) {
             sum += i;
             counter++;
-        } if(sum==2401){
-            System.out.println(counter);
         }
-        return sum;
+        result = sum+" "+counter;
+
+        return result;
     }
     //2
-    public static String method2(int num) {
+    public static String isPrime(int num) {
         int var;
         boolean isTrue = true;
         for (int i = 2; i <= num / 2; i++) {
@@ -27,14 +28,14 @@ public class Loops {
                 break;
             }
         }
-        if (isTrue) {
-            return num + " простое число";
+        if (isTrue) {return num + " простое число";
+
         } else {
             return num + " составное число";
         }
     }
 //t3
-        public static int method3(int x) {
+        public static int sqrtBinary(int x) {
             int result = x;
             boolean finished = false;
             if (x != 0 && x != 1) {
@@ -59,16 +60,19 @@ public class Loops {
 
             return result;
         }
-    public static int method4(int number){
+//4
+    public static int factorial(int number){
+        if(number < 0|| number>20) {
+            throw new IllegalArgumentException("Number must be between 0 & 20!");
+        }
         int result = 1;
         for (int i = 1; i <= number; i++){
             result *= i;
         }
         return result;
     }
-
-    //t5
-    public static int method5(int num) {
+//t5
+    public static int sumOfnum(int num) {
         int result = 0;
         while (num>0) {
             result = result + num %10;
@@ -76,5 +80,18 @@ public class Loops {
         }
         return result;
     }
+//6
+public static String mirrored(int number) {
+    String mirroredNumber = "";
+    if(number < 0) {
+        mirroredNumber = "-";
+        number *= -1;
+    }
+    while(number != 0) {
+        mirroredNumber += number % 10;
+        number /= 10;
+    }
+    return mirroredNumber;
+}
 }
 
