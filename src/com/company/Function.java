@@ -1,7 +1,8 @@
 package com.company;
 
+
 public class Function {
-    
+//1
            public static String dateByNum(int day) {
         String dayName;
         if (day == 1) {
@@ -27,21 +28,21 @@ public class Function {
         }
         return null;
     }
-
+//2
     public static double distance(int x1, int y1, int x2, int y2) {
         return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
     }
-
+//3
+    public static String[] numbers1_9  = {"один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
+    public static String[] numbers11_19 = {"одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать",
+            "семнадцать", "восемнадцать", "девятнадцать"};
+    public static String[] numbersTens = {"десять", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят",
+            "восемьдесят", "девяносто"};
+    public static String[] numbersHundreds = {"сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот",
+            "восемьсот", "девятьсот"};
     public static String getStringByNumber(int number) {
-        public static String[] numbers1_9 = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        public static String[] numbers11_19 = {"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-                "seventeen", "eighteen", "nineteen"};
-        public static String[] numbersTens = {"ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
-                "eighty", "ninety"};
-        public static String[] numbersHundreds = {"hundred one", "hundreds two", "hundreds three", "hundreds four", "hundreds five", "hundreds six", "hundreds seven",
-                "hundreds eight", "hundreds nine"};
-    }
-        if (number == 0) {
+
+           if (number == 0) {
             return "zero";
         }
         String spelledNumber = " ";
@@ -74,17 +75,7 @@ public class Function {
 
         return spelledNumber;
     }
-    public static void main(String[] args) {
-        System.out.println(getNumberByString("сто двадцать один"));
-    }
-    public static String[] numbers1_9  = {"один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
-    public static String[] numbers11_19 = {"одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать",
-            "семнадцать", "восемнадцать", "девятнадцать"};
-    public static String[] numbersTens = {"десять", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят",
-            "восемьдесят", "девяносто"};
-    public static String[] numbersHundreds = {"сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот",
-            "восемьсот", "девятьсот"};
-
+//4
     public static int getNumberByString(String number){
 
 
@@ -120,6 +111,7 @@ public class Function {
         return result;
     }
 }
+
 
 
 
